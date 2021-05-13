@@ -1,0 +1,929 @@
+Last login: Tue May 11 21:09:13 on console
+surajsingh@Surajs-Air ~ % sudo su
+Password:
+sh-3.2# ls
+.CFUserTextEncoding	Downloads		log
+.DS_Store		Library			log.sh
+.Trash			Movies			sample.sh
+.viminfo		Music			sample1.txt
+.zsh_history		Pictures		sslf.txt
+.zsh_sessions		Public			sslf.xml
+Applications		fan.txt			tab.log
+Desktop			host_list.txt
+Documents		ipaddress.sh
+sh-3.2# su surajsingh
+surajsingh@Surajs-Air ~ % ls
+Applications	Library		Public		log		sslf.txt
+Desktop		Movies		fan.txt		log.sh		sslf.xml
+Documents	Music		host_list.txt	sample.sh	tab.log
+Downloads	Pictures	ipaddress.sh	sample1.txt
+surajsingh@Surajs-Air ~ % clrae
+zsh: command not found: clrae
+surajsingh@Surajs-Air ~ % clear
+
+
+surajsingh@Surajs-Air ~ % history
+    1  ls
+    2  clrae
+    3  clear
+surajsingh@Surajs-Air ~ % clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+surajsingh@Surajs-Air ~ % yum install git
+zsh: command not found: yum
+surajsingh@Surajs-Air ~ % which git
+/usr/bin/git
+surajsingh@Surajs-Air ~ % ls
+Applications	Library		Public		log		sslf.txt
+Desktop		Movies		fan.txt		log.sh		sslf.xml
+Documents	Music		host_list.txt	sample.sh	tab.log
+Downloads	Pictures	ipaddress.sh	sample1.txt
+surajsingh@Surajs-Air ~ % cd Desktop
+surajsingh@Surajs-Air Desktop % ls
+CHANDNI					Terminal Saved Output 2
+Relocated Items.nosync			estatment.pdf
+SURAJ					fanuc
+Screenshot 2020-12-03 at 9.04.16 PM.png	fasttag
+Shikha.jpg				output.rtf
+surajsingh@Surajs-Air Desktop % mkdir GITLAB
+surajsingh@Surajs-Air Desktop % cd GITLAB 
+surajsingh@Surajs-Air GITLAB % ls
+surajsingh@Surajs-Air GITLAB % git status
+fatal: not a git repository (or any of the parent directories): .git
+surajsingh@Surajs-Air GITLAB % clear
+
+
+surajsingh@Surajs-Air GITLAB % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/surajsingh/Desktop/GITLAB/.git/
+surajsingh@Surajs-Air GITLAB % git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+surajsingh@Surajs-Air GITLAB % clear
+
+
+
+
+surajsingh@Surajs-Air GITLAB % ls
+surajsingh@Surajs-Air GITLAB % touch suraj.txt
+surajsingh@Surajs-Air GITLAB % cat >suraj.txt
+hello this is suraj
+surajsingh@Surajs-Air GITLAB % ls
+suraj.txt
+surajsingh@Surajs-Air GITLAB % git add .
+surajsingh@Surajs-Air GITLAB % git status  
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   suraj.txt
+
+surajsingh@Surajs-Air GITLAB % git commit -m "commit1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'surajsingh@Surajs-Air.(none)')
+surajsingh@Surajs-Air GITLAB % clear
+
+surajsingh@Surajs-Air GITLAB % git config --global user.name 
+surajsingh@Surajs-Air GITLAB % git config --global user.name "suraj"
+surajsingh@Surajs-Air GITLAB % git config --global user.mail "suraj@gmail.com"
+surajsingh@Surajs-Air GITLAB % git cnfig --list
+git: 'cnfig' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+surajsingh@Surajs-Air GITLAB % git config --list
+credential.helper=osxkeychain
+user.name=suraj
+user.mail=suraj@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+surajsingh@Surajs-Air GITLAB % clear
+
+
+
+
+
+surajsingh@Surajs-Air GITLAB % cd
+surajsingh@Surajs-Air ~ % cd Desktop 
+surajsingh@Surajs-Air Desktop % ls
+CHANDNI					Terminal Saved Output 2
+GITLAB					estatment.pdf
+Relocated Items.nosync			fanuc
+SURAJ					fasttag
+Screenshot 2020-12-03 at 9.04.16 PM.png	output.rtf
+Shikha.jpg
+surajsingh@Surajs-Air Desktop % clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+surajsingh@Surajs-Air Desktop % git remote add origin https://github.com/iamsoorajsingh/Devops.git
+fatal: not a git repository (or any of the parent directories): .git
+surajsingh@Surajs-Air Desktop % cd GITLAB 
+surajsingh@Surajs-Air GITLAB % git remote add origin https://github.com/iamsoorajsingh/Devops.git
+surajsingh@Surajs-Air GITLAB % ls
+suraj.txt
+surajsingh@Surajs-Air GITLAB % git pull -u origin
+error: unknown switch `u'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --recurse-submodules[=<on-demand>]
+                          control for recursive fetching of submodules
+
+Options related to merging
+    -r, --rebase[=(false|true|merges|preserve|interactive)]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --signoff[=...]       add a Signed-off-by trailer
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --shallow-since <time>
+                          deepen history of shallow repository based on time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --deepen <n>          deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+    -o, --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --negotiation-tip <revision>
+                          report that we have only objects reachable from this object
+    --show-forced-updates
+                          check for forced-updates on all updated branches
+    --set-upstream        set upstream for git pull/fetch
+
+surajsingh@Surajs-Air GITLAB % clear
+
+surajsingh@Surajs-Air GITLAB % git pull -u origin master
+error: unknown switch `u'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --recurse-submodules[=<on-demand>]
+                          control for recursive fetching of submodules
+
+Options related to merging
+    -r, --rebase[=(false|true|merges|preserve|interactive)]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --signoff[=...]       add a Signed-off-by trailer
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --shallow-since <time>
+                          deepen history of shallow repository based on time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --deepen <n>          deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+    -o, --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --negotiation-tip <revision>
+                          report that we have only objects reachable from this object
+    --show-forced-updates
+                          check for forced-updates on all updated branches
+    --set-upstream        set upstream for git pull/fetch
+
+surajsingh@Surajs-Air GITLAB % git pull origin master 
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 20 (delta 2), reused 20 (delta 2), pack-reused 0
+Unpacking objects: 100% (20/20), 2.27 KiB | 93.00 KiB/s, done.
+From https://github.com/iamsoorajsingh/Devops
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % cd mumbai
+surajsingh@Surajs-Air mumbai % ls
+file1.txt
+surajsingh@Surajs-Air mumbai % cat file1.txt 
+this file is send by tony from mumbai.\
+this is bucky from singapor.
+surajsingh@Surajs-Air mumbai % cd ..  
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % cd mumbaitony 
+cd: not a directory: mumbaitony
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % cat mumbaitony 
+hellow this is tony from mummbai .%                                             surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % clear
+
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % cd mumbai
+surajsingh@Surajs-Air mumbai % ls
+file1.txt
+surajsingh@Surajs-Air mumbai % cat >>file1.txt 
+hi this is suraj from Apple %                                                   surajsingh@Surajs-Air mumbai % ls
+file1.txt
+surajsingh@Surajs-Air mumbai % cat file1.txt 
+this file is send by tony from mumbai.\
+this is bucky from singapor.
+hi this is suraj from Apple %                                                   surajsingh@Surajs-Air mumbai % ls
+file1.txt
+surajsingh@Surajs-Air mumbai % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   ../suraj.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   file1.txt
+
+surajsingh@Surajs-Air mumbai % clear
+
+surajsingh@Surajs-Air mumbai % git add .
+surajsingh@Surajs-Air mumbai % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   file1.txt
+	new file:   ../suraj.txt
+
+surajsingh@Surajs-Air mumbai % git log --oneline
+bba1e71 (HEAD -> master, origin/master) file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air mumbai % git commit -m "file1 by suraj"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'surajsingh@Surajs-Air.(none)')
+surajsingh@Surajs-Air mumbai % git config --list
+credential.helper=osxkeychain
+user.name=suraj
+user.mail=suraj@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/iamsoorajsingh/Devops.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+surajsingh@Surajs-Air mumbai % ls
+file1.txt
+surajsingh@Surajs-Air mumbai % clear
+
+surajsingh@Surajs-Air mumbai % git commit -m "file1 by suraj"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'surajsingh@Surajs-Air.(none)')
+surajsingh@Surajs-Air mumbai % Omit --global
+zsh: command not found: Omit
+surajsingh@Surajs-Air mumbai % which Omit   
+Omit not found
+surajsingh@Surajs-Air mumbai % clear                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+surajsingh@Surajs-Air mumbai % git config --list
+credential.helper=osxkeychain
+user.name=suraj
+user.mail=suraj@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/iamsoorajsingh/Devops.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+surajsingh@Surajs-Air mumbai % git commit -m "file1 by suraj"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'surajsingh@Surajs-Air.(none)')
+surajsingh@Surajs-Air mumbai % git git config --global user.email "sura@gmail.com" 
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+surajsingh@Surajs-Air mumbai % git config --global user.email "sura@gmail.com" 
+surajsingh@Surajs-Air mumbai % git commit -m "file1 by suraj"                     
+[master b408b7f] file1 by suraj
+ 2 files changed, 2 insertions(+)
+ create mode 100644 suraj.txt
+surajsingh@Surajs-Air mumbai % clear
+
+surajsingh@Surajs-Air mumbai % ls
+file1.txt
+surajsingh@Surajs-Air mumbai % git log --online
+fatal: unrecognized argument: --online
+surajsingh@Surajs-Air mumbai % git log --oneline
+b408b7f (HEAD -> master) file1 by suraj
+bba1e71 (origin/master) file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air mumbai % git status
+On branch master
+nothing to commit, working tree clean
+surajsingh@Surajs-Air mumbai % git push -u origin master
+Username for 'https://github.com': iamsoorajsingh
+Password for 'https://iamsoorajsingh@github.com': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 442 bytes | 442.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/iamsoorajsingh/Devops.git
+   bba1e71..b408b7f  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+surajsingh@Surajs-Air mumbai % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+surajsingh@Surajs-Air mumbai % clear
+
+
+
+
+surajsingh@Surajs-Air mumbai % cd
+surajsingh@Surajs-Air ~ % git branch
+fatal: not a git repository (or any of the parent directories): .git
+surajsingh@Surajs-Air ~ % cd Desktop/GITLAB 
+surajsingh@Surajs-Air GITLAB % git branch
+* master
+surajsingh@Surajs-Air GITLAB % git branch1
+git: 'branch1' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+surajsingh@Surajs-Air GITLAB % git branch 
+* master
+surajsingh@Surajs-Air GITLAB % git b1     
+git: 'b1' is not a git command. See 'git --help'.
+
+The most similar commands are
+	am
+	gc
+	mv
+	p4
+	rm
+surajsingh@Surajs-Air GITLAB % git branch
+* master
+surajsingh@Surajs-Air GITLAB % clear
+
+
+
+
+
+
+
+
+
+
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % mkdir Apple
+surajsingh@Surajs-Air GITLAB % cd Apple 
+surajsingh@Surajs-Air Apple % git branch
+* master
+surajsingh@Surajs-Air Apple % cat >file1.txt
+hello this is suraj%                                                                                                    surajsingh@Surajs-Air Apple % cd ..
+surajsingh@Surajs-Air GITLAB % ls
+Apple		mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % git branch
+* master
+surajsingh@Surajs-Air GITLAB % git branch branch1
+surajsingh@Surajs-Air GITLAB % git branch        
+  branch1
+* master
+surajsingh@Surajs-Air GITLAB % ls
+Apple		mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % git checkout branch1
+Switched to branch 'branch1'
+surajsingh@Surajs-Air GITLAB % ls
+Apple		mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % git branch          
+* branch1
+  master
+surajsingh@Surajs-Air GITLAB % git log --oneline
+b408b7f (HEAD -> branch1, origin/master, master) file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air GITLAB % clear
+
+
+
+surajsingh@Surajs-Air GITLAB % cat >filebranch1.txt
+this is branch1 file ^C  
+surajsingh@Surajs-Air GITLAB % cat filebranch1.txt 
+this is branch1 file %                                                                                                  surajsingh@Surajs-Air GITLAB % ls
+Apple		filebranch1.txt	mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+surajsingh@Surajs-Air GITLAB % git add .
+surajsingh@Surajs-Air GITLAB % git commit -m "branch1"
+[branch1 2266626] branch1
+ 2 files changed, 2 insertions(+)
+ create mode 100644 Apple/file1.txt
+ create mode 100644 filebranch1.txt
+surajsingh@Surajs-Air GITLAB % git log --oneline
+2266626 (HEAD -> branch1) branch1
+b408b7f (origin/master, master) file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air GITLAB % git push -u origin branch1
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 392 bytes | 392.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/iamsoorajsingh/Devops/pull/new/branch1
+remote: 
+To https://github.com/iamsoorajsingh/Devops.git
+ * [new branch]      branch1 -> branch1
+Branch 'branch1' set up to track remote branch 'branch1' from 'origin'.
+surajsingh@Surajs-Air GITLAB % ggit checkout master      
+zsh: command not found: ggit
+surajsingh@Surajs-Air GITLAB % git checkout master 
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % git log --oneline
+b408b7f (HEAD -> master, origin/master) file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air GITLAB % ls
+mumbai		mumbaitony	suraj.txt
+surajsingh@Surajs-Air GITLAB % git batch
+git: 'batch' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+surajsingh@Surajs-Air GITLAB % git branch
+  branch1
+* master
+surajsingh@Surajs-Air GITLAB % git checkout branch1
+Switched to branch 'branch1'
+Your branch is up to date with 'origin/branch1'.
+surajsingh@Surajs-Air GITLAB % touch second
+surajsingh@Surajs-Air GITLAB % ls
+Apple		filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % git checkout master 
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+surajsingh@Surajs-Air GITLAB % ls                 
+mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % cat >>second 
+this is workspace^C  
+surajsingh@Surajs-Air GITLAB % git checkout branch1
+Switched to branch 'branch1'
+Your branch is up to date with 'origin/branch1'.
+surajsingh@Surajs-Air GITLAB % ls
+Apple		filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % cat second 
+this is workspace%                                                                                                      surajsingh@Surajs-Air GITLAB % git branch          
+* branch1
+  master
+surajsingh@Surajs-Air GITLAB % git checkout master 
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+surajsingh@Surajs-Air GITLAB % git merge branch1
+Updating b408b7f..2266626
+Fast-forward
+ Apple/file1.txt | 1 +
+ filebranch1.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 Apple/file1.txt
+ create mode 100644 filebranch1.txt
+surajsingh@Surajs-Air GITLAB % ls
+Apple		filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % git log --oneline
+2266626 (HEAD -> master, origin/branch1, branch1) branch1
+b408b7f (origin/master) file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air GITLAB % git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/iamsoorajsingh/Devops.git
+   b408b7f..2266626  master -> master
+surajsingh@Surajs-Air GITLAB % git checckout branch1
+git: 'checckout' is not a git command. See 'git --help'.
+
+The most similar command is
+	checkout
+surajsingh@Surajs-Air GITLAB % ls
+Apple		filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % clear
+
+surajsingh@Surajs-Air GITLAB % git branch
+  branch1
+* master
+surajsingh@Surajs-Air GITLAB % ls 
+Apple		filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % mkdir conflict
+surajsingh@Surajs-Air GITLAB % cd conflict 
+surajsingh@Surajs-Air conflict % cat >conf.txt
+hello conflict%                                                                                                         surajsingh@Surajs-Air conflict % git log
+commit 22666267531c99c52b02f2b764c397e0ab07ce06 (HEAD -> master, origin/master, origin/branch1, branch1)
+Author: suraj <sura@gmail.com>
+Date:   Wed May 12 01:45:19 2021 +0530
+
+    branch1
+
+commit b408b7fb2eee578d81cea457b48fa6256bf079ba
+Author: suraj <sura@gmail.com>
+Date:   Wed May 12 01:36:21 2021 +0530
+
+    file1 by suraj
+
+commit bba1e71337afe873a19d4cc37de3091586b8e2ba
+Author: bucky <bucky@gmail.com>
+Date:   Tue May 11 17:46:19 2021 +0000
+
+    file1 commit by bucky from singapor
+
+commit c041c75921029118122bdd89ab54c128bd349fcb
+Author: tony <tony@gmail.com>
+Date:   Tue May 11 17:35:21 2021 +0000
+
+    file1 commit by tony from mumbai
+
+commit f63ed1a64349cd3a3800d4f0308daf747d7114b1
+Author: tony <tony@gmail.com>
+Date:   Tue May 11 17:29:12 2021 +0000
+
+    first commit from mumbai
+surajsingh@Surajs-Air conflict % clear
+
+surajsingh@Surajs-Air conflict % ls
+conf.txt
+surajsingh@Surajs-Air conflict % git add .
+surajsingh@Surajs-Air conflict % git commit -m "conflict1"
+[master 679838d] conflict1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict/conf.txt
+surajsingh@Surajs-Air conflict % git log --oneline
+679838d (HEAD -> master) conflict1
+2266626 (origin/master, origin/branch1, branch1) branch1
+b408b7f file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air conflict % git checkout branch1
+Switched to branch 'branch1'
+Your branch is up to date with 'origin/branch1'.
+surajsingh@Surajs-Air conflict % ls
+surajsingh@Surajs-Air conflict % cd ..
+surajsingh@Surajs-Air GITLAB % ls
+Apple		filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % mkdir conflict
+surajsingh@Surajs-Air GITLAB % ls
+Apple		conflict	filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % cd conflict 
+surajsingh@Surajs-Air conflict % ls
+surajsingh@Surajs-Air conflict % clear
+
+
+
+
+
+
+
+
+surajsingh@Surajs-Air conflict % cat >conf.txt
+hi rajput
+surajsingh@Surajs-Air conflict % git add .
+surajsingh@Surajs-Air conflict % git commit -m "conflictb"
+[branch1 9c3f843] conflictb
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict/conf.txt
+surajsingh@Surajs-Air conflict % git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+surajsingh@Surajs-Air conflict % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+surajsingh@Surajs-Air conflict % git merge branch1
+CONFLICT (add/add): Merge conflict in conflict/conf.txt
+Auto-merging conflict/conf.txt
+Automatic merge failed; fix conflicts and then commit the result.
+surajsingh@Surajs-Air conflict % vi conf.txt
+surajsingh@Surajs-Air conflict % ls
+surajsingh@Surajs-Air conflict % vi conflict/conf.txt
+surajsingh@Surajs-Air conflict % ls
+surajsingh@Surajs-Air conflict % vi conf.txt
+surajsingh@Surajs-Air conflict % git merge branch1   
+fatal: Unable to read current working directory: No such file or directory
+surajsingh@Surajs-Air conflict % cd ..            
+surajsingh@Surajs-Air GITLAB % git branch
+  branch1
+* master
+surajsingh@Surajs-Air GITLAB % git merge branch1
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+surajsingh@Surajs-Air GITLAB % ls
+Apple		conflict	filebranch1.txt	mumbai		mumbaitony	second		suraj.txt
+surajsingh@Surajs-Air GITLAB % cd conflict 
+surajsingh@Surajs-Air conflict % ls
+conf.txt
+surajsingh@Surajs-Air conflict % cat conf.txt 
+<<<<<<< HEAD
+hello conflict
+=======
+hi rajput
+>>>>>>> branch1
+surajsingh@Surajs-Air conflict % vi conf.txt 
+surajsingh@Surajs-Air conflict % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both added:      conf.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+	../second
+
+no changes added to commit (use "git add" and/or "git commit -a")
+surajsingh@Surajs-Air conflict % git add .
+surajsingh@Surajs-Air conflict % git commit -m "conflictreso"
+[master c83825b] conflictreso
+surajsingh@Surajs-Air conflict % ls                          
+conf.txt
+surajsingh@Surajs-Air conflict % git log --oneline
+c83825b (HEAD -> master) conflictreso
+9c3f843 (branch1) conflictb
+679838d conflict1
+2266626 (origin/master, origin/branch1) branch1
+b408b7f file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air conflict % git log --oneline
+c83825b (HEAD -> master) conflictreso
+9c3f843 (branch1) conflictb
+679838d conflict1
+2266626 (origin/master, origin/branch1) branch1
+b408b7f file1 by suraj
+bba1e71 file1 commit by bucky from singapor
+c041c75 file1 commit by tony from mumbai
+f63ed1a first commit from mumbai
+surajsingh@Surajs-Air conflict % clear
+
+surajsingh@Surajs-Air conflict % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
